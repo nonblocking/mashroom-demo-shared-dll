@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport"/>
+    <title>Demo Shared DLL React App 2</title>
+</head>
+<body>
+
+    <div id="demo-app2-host">
+        Loading...
+    </div>
+
+    <script>
+        (function() {
+            document.addEventListener("DOMContentLoaded", function() {
+                var portalAppSetup = {
+                    user: {
+                        username: 'John'
+                    },
+                    appConfig: {
+                    }
+                };
+
+                window.startupDemoSharedDLLApp2(document.getElementById("demo-app2-host"), portalAppSetup)
+            });
+        })();
+    </script>
+</body>
+</html>

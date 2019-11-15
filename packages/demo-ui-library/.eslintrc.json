@@ -1,0 +1,24 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "flowtype"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "env": {
+        "node": false,
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "settings": {
+        "react": {
+            "version": "16.11"
+        }
+    },
+    "rules": {
+    }
+}

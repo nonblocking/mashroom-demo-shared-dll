@@ -1,0 +1,17 @@
+{
+    "name": "@mashroom/demo-shared-dll",
+    "version": "1.0.0",
+    "private": true,
+    "homepage": "https://www.mashroom-server.com",
+    "repository": "github:nonblocking/mashroom-demo-shared-dll",
+    "devDependencies": {
+        "@mashroom/demo-ui-library": "1.0.0",
+        "react": "^16.11.0",
+        "react-dom": "^16.11.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
+    },
+    "scripts": {
+        "build": "webpack --mode production"
+    }
+}
