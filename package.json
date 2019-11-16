@@ -9,7 +9,6 @@
     "devDependencies": {
         "@mashroom/mashroom": "^1.2.0",
         "@mashroom/mashroom-portal": "^1.2.0",
-        "@mashroom/mashroom-dll-webpack-plugin": "^1.0.0",
         "@babel/core": "^7.7.2",
         "@babel/preset-env": "^7.7.1",
         "@babel/preset-react": "7.7.0",

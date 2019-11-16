@@ -7,6 +7,7 @@
     "devDependencies": {
         "@mashroom/demo-ui-library": "1.0.0",
         "@mashroom/demo-shared-dll": "1.0.0",
+        "@mashroom/mashroom-dll-webpack-plugin": "^1.0.1",
         "@babel/cli": "^7.7.0",
         "eslint": "^6.6.0",
         "jest": "^24.9.0",
