@@ -24,7 +24,7 @@
         "lint": "eslint --ext .ts,.tsx --fix ./src",
         "type-check": "tsc --noEmit",
         "dev": "webpack serve --hot --mode development",
-        "build": "webpack --mode production"
+        "build": "npm run type-check && webpack --mode production"
     },
     "mashroom": {
         "devModeBuildScript": "build",

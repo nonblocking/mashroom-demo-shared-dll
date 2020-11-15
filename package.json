@@ -38,6 +38,6 @@
         "setup": "npm install && lerna bootstrap --no-ci",
         "type-check": "lerna run type-check",
         "lint": "lerna run lint",
-        "build": "npm run type-check && npm run lint && lerna run build"
+        "build": "lerna run build"
     }
 }

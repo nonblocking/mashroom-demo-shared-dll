@@ -19,6 +19,6 @@
     "scripts": {
         "lint": "eslint --ext .ts,.tsx --fix ./src",
         "type-check": "tsc --noEmit",
-        "build": "npm run lint && babel -x .ts,.tsx src -d dist && tsc --emitDeclarationOnly"
+        "build": "npm run type-check && npm run lint && babel -x .ts,.tsx src -d dist && tsc --emitDeclarationOnly"
     }
 }
