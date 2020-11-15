@@ -23,6 +23,7 @@ const bootstrap: MashroomPortalAppPluginBootstrapFunction = (
     });
 };
 
+// @ts-ignore
 global.startupDemoSharedDLLApp2 = bootstrap;
 
 

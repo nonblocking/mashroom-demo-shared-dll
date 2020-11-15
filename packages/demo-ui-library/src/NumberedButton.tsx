@@ -1,19 +1,18 @@
-// @flow
 
 import React, { PureComponent} from 'react';
 
 let COUNTER = 1;
 
 type Props = {
-    prefix: ?string
+    prefix?: string;
 }
 
 export default class NumberedButton extends PureComponent<Props> {
 
     num: number;
 
-    constructor() {
-        super();
+    constructor(props: Props) {
+        super(props);
         this.num = COUNTER ++;
     }
 

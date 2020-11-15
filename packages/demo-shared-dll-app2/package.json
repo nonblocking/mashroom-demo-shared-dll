@@ -9,19 +9,22 @@
         "@mashroom/demo-ui-library": "1.0.0",
         "@mashroom/demo-shared-dll": "1.0.0",
         "@mashroom/mashroom-dll-webpack-plugin": "^1.0.3",
-        "@babel/cli": "^7.8.4",
-        "eslint": "^6.8.0",
-        "jest": "^25.2.7",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "webpack": "^4.42.1",
-        "webpack-cli": "^3.3.11",
-        "webpack-dev-server": "^3.10.3",
-        "html-webpack-plugin": "^4.0.4"
+        "@babel/cli": "^7.12.1",
+        "eslint": "^7.13.0",
+        "jest": "^26.6.3",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^4.2.0",
+        "webpack-dev-server": "^3.11.0",
+        "html-webpack-plugin": "^4.5.0",
+        "typescript": "^4.0.5"
     },
     "scripts": {
-        "dev": "webpack-dev-server --hot --mode development",
-        "build": "webpack --mode production --display-modules"
+        "lint": "eslint --ext .ts,.tsx --fix ./src",
+        "type-check": "tsc --noEmit",
+        "dev": "webpack serve --hot --mode development",
+        "build": "webpack --mode production"
     },
     "mashroom": {
         "devModeBuildScript": "build",
@@ -33,7 +36,7 @@
                 "bootstrap": "startupDemoSharedDLLApp2",
                 "sharedResources": {
                     "js": [
-                        "demo_shared_dll_4eef5ab6e7a02880d5ed.js"
+                        "demo_shared_dll_7419e02c62f4d06e0102.js"
                     ]
                 },
                 "resources": {

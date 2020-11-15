@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
                 enforce: 'pre',
                 use: [
@@ -28,7 +28,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -61,7 +61,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.ts', '.tsx'],
     },
     plugins: [
         new CleanWebpackPlugin(),

@@ -1,12 +1,12 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "plugins": [
         "react",
-        "flowtype"
+        "@typescript-eslint/eslint-plugin"
     ],
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
     "env": {
         "node": false,
@@ -16,7 +16,7 @@
     },
     "settings": {
         "react": {
-            "version": "16.11"
+            "version": "17"
         }
     },
     "rules": {

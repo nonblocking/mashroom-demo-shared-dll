@@ -1,4 +1,3 @@
-// @flow
 
 import '../sass/style.scss';
 
@@ -23,6 +22,8 @@ const bootstrap: MashroomPortalAppPluginBootstrapFunction = (
     });
 };
 
+
+// @ts-ignore
 global.startupDemoSharedDLLApp1 = bootstrap;
 
 
