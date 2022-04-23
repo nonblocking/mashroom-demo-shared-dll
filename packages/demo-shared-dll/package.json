@@ -6,10 +6,8 @@
     "repository": "github:nonblocking/mashroom-demo-shared-dll",
     "devDependencies": {
         "@mashroom/demo-ui-library": "1.0.0",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "webpack": "^4.46.0",
-        "webpack-cli": "^4.5.0"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "scripts": {
         "build": "webpack --mode production"

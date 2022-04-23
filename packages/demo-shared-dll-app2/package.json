@@ -8,47 +8,14 @@
     "devDependencies": {
         "@mashroom/demo-ui-library": "1.0.0",
         "@mashroom/demo-shared-dll": "1.0.0",
-        "@mashroom/mashroom-dll-webpack-plugin": "^1.0.4",
-        "@babel/cli": "^7.13.10",
-        "eslint": "^7.21.0",
-        "jest": "^26.6.3",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "webpack": "^4.46.0",
-        "webpack-cli": "^4.5.0",
-        "webpack-dev-server": "^3.11.2",
-        "html-webpack-plugin": "^4.5.2",
-        "typescript": "^4.2.3"
+        "@mashroom/mashroom-dll-webpack-plugin": "file:../../../mashroom-dll-webpack-plugin/mashroom-mashroom-dll-webpack-plugin-1.0.7.tgz",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "scripts": {
         "lint": "eslint --ext .ts,.tsx --fix ./src",
         "type-check": "tsc --noEmit",
         "dev": "webpack serve --hot --mode development",
         "build": "npm run type-check && webpack --mode production"
-    },
-    "mashroom": {
-        "devModeBuildScript": "build",
-        "plugins": [
-            {
-                "name": "Demo Shared DLL App 2",
-                "type": "portal-app",
-                "category": "Demo",
-                "bootstrap": "startupDemoSharedDLLApp2",
-                "sharedResources": {
-                    "js": [
-                        "demo_shared_dll_41fb82922f1c039ca81c.js"
-                    ]
-                },
-                "resources": {
-                    "js": [
-                        "bundle_app2.js"
-                    ]
-                },
-                "defaultConfig": {
-                    "resourcesRoot": "./dist",
-                    "appConfig": {}
-                }
-            }
-        ]
     }
 }

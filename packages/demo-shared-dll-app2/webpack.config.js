@@ -1,6 +1,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MashroomWDLLWebpackPlugin = require('@mashroom/mashroom-dll-webpack-plugin');
@@ -13,20 +14,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.(ts|tsx)$/,
-                exclude: /node_modules/,
-                enforce: 'pre',
-                use: [
-                    {
-                        loader: 'eslint-loader',
-                        options: {
-                            fix: true,
-                            configFile: __dirname + '/.eslintrc.json',
-                        },
-                    },
-                ],
-            },
             {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
@@ -50,20 +37,16 @@ module.exports = {
                     },
                 ],
             },
-            {
-                test: /\.(png|gif|jpg|jpeg|ttf|eot|woff(2)?)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
-            },
         ],
     },
     resolve: {
         extensions: ['.js', '.ts', '.tsx'],
     },
     plugins: [
+        new ESLintPlugin({
+            extensions: ['.js', '.ts', '.tsx'],
+            fix: true,
+        }),
         new CleanWebpackPlugin(),
         new MashroomWDLLWebpackPlugin({
             manifest: require("@mashroom/demo-shared-dll/dist/demo_shared_dll_manifest.json"),
@@ -79,6 +62,12 @@ module.exports = {
     ],
     devServer: {
         port: 6002,
-        open: true
+        open: true,
+        client: {
+            overlay: {
+                errors: true,
+                warnings: false,
+            },
+        }
     }
 };

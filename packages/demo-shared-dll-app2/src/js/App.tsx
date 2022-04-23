@@ -2,9 +2,6 @@
 import React from 'react';
 import { NumberedButton } from '@mashroom/demo-ui-library';
 
-type Props = {
-}
-
 const App = () => {
 
     return (
