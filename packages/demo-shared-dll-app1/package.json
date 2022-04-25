@@ -7,7 +7,7 @@
     "devDependencies": {
         "@mashroom/demo-ui-library": "1.0.0",
         "@mashroom/demo-shared-dll": "1.0.0",
-        "@mashroom/mashroom-dll-webpack-plugin": "file:../../../mashroom-dll-webpack-plugin/mashroom-mashroom-dll-webpack-plugin-1.0.7.tgz",
+        "@mashroom/mashroom-dll-webpack-plugin": "^2.0.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
