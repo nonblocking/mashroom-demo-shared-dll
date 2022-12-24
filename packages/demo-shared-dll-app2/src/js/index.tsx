@@ -1,9 +1,8 @@
-// @flow
 
 import '../sass/style.scss';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import App from './App';
 
 import type {MashroomPortalAppPluginBootstrapFunction} from "@mashroom/mashroom-portal/type-definitions";
@@ -14,11 +13,12 @@ const bootstrap: MashroomPortalAppPluginBootstrapFunction = (
 ) => {
     const { appConfig = {}, user: { username } } = portalAppSetup;
 
-    ReactDOM.render(<App />, portalAppHostElement);
+    const root = createRoot(portalAppHostElement);
+    root.render(<App />);
 
     return Promise.resolve({
         willBeRemoved: () => {
-            ReactDOM.unmountComponentAtNode(portalAppHostElement);
+            root.unmount();
         },
     });
 };
